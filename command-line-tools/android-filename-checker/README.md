@@ -23,7 +23,7 @@ python3 -m main ./dummy_directory_tree
 
 Use bash output redirection to flow output into a text file if working with a large amount of files with invalid characters where the entire output can't be held in a terminal.
 
-python3 -m main ./dummy_directory_tree <path/output.txt>
+python3 -m main ./dummy_directory_tree > log.txt
 
 ## Output
 
@@ -32,21 +32,16 @@ python3 -m main ./dummy_directory_tree <path/output.txt>
 ./dummy_directory_tree/directory_3/invalid\*filename.txt
 Invalid Characters: ['*'] 
 
-./dummy_directory_tree/directory_3/subdirectory/invalid&filename.txt
-Invalid Characters: ['&'] 
-
 ./dummy_directory_tree/directory_4/invalid\filename.txt
 Invalid Characters: ['\\\\'] 
-
-./dummy_directory_tree/directory_2/invalid^filename.txt
-Invalid Characters: ['^'] 
-
-./dummy_directory_tree/directory_2/invalid\$filename.txt
-Invalid Characters: ['$'] 
 
 ./dummy_directory_tree/directory_1/invalid:filename.txt
 Invalid Characters: [':'] 
 
 ======== Invalid Filenames Search Complete ========
+
+# Post Scan
+
+Utilize computer file explorer filename search on the root of the directories (target_directory) locate and group files invalid characters in one place; ctrl-A all offending filenames; select name change while group selecting to mass rename files to replace invalid character with a valid one. Recommendation: replace ":" with "," and "?" with "\_" (underscore).
 
 
