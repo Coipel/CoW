@@ -44,7 +44,7 @@ Invalid Characters: [':']
 
 Note, the following was done using default Ubuntu "Files" (Nautilus)
 
-Utilize computer file explorer filename search on the root of the directories (target_directory) locate and group files invalid characters in one place; ctrl-A all offending filenames; select name change while group selecting to mass rename files to replace invalid character with a valid one. 
+Utilize computer file explorer filename search on the root of the directories (target_directory) locate and group files invalid characters in one place; ctrl-A all offending filenames; select name change while group selecting to mass rename files to replace invalid character with a valid one. Repeat procedure for all offending files. Rerun scan as needed to see what remains until all filenames are valid. Start with the most common invalid symbol so rescan reports become easier to read.
 
 Recommendation: replace ":" with "," and "?" with "\_" (underscore).
 
