@@ -5,5 +5,5 @@ This repository is my collection of works that will hold various scripts, progra
 
 # Works
 
-* command-line tools
+* command-line-tools
     * android-filename-checker

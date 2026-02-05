@@ -2,9 +2,19 @@ import os
 import argparse
 import re
 
+# Whitelist approach
+# Introduced variables to minimize regex for readability/maintainability
+letters_and_digits = "\\w" # Includes regular letters of English and other languages as well as digits
+whitespaces = "\\s"
+special_regex = "\\-\\[\\]"
+specials = ".,'&()—;–!=・‘^«»$"
+
+# The ^ symbol in the beginning inverts the logic of everything to the right; aka the whitelist
+blacklist = "[^" + letters_and_digits + whitespaces + special_regex + specials + "]"
+
 
 def find_invalid_characters(filename) -> list[str]:
-    return re.findall("[^\\w\\d\\s\\-.,]",filename)
+    return re.findall(blacklist, filename)
 
 
 def path_walker(target_directory):
@@ -20,8 +30,7 @@ def path_walker(target_directory):
 
 def main():
     parser = argparse.ArgumentParser(prog="android-filename-checker",
-                                    description="Will generate report of filenames not consistent of 'a-z','A-Z','0-9','_-.'",
-                                    epilog="Non-english characters and valid special characters not supported (false-positives)")
+                                    description="Will generate report of filenames not consistent with Android")
 
     parser.add_argument("target_directory")
     args = parser.parse_args()
