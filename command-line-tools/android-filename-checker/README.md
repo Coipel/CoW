@@ -29,13 +29,13 @@ python3 -m main ./dummy_directory_tree > log.txt
 
 ======== Invalid Filenames Search ========
 
-./dummy_directory_tree/directory_3/invalid\*filename.txt
+./dummy_directory_tree/directory_3/invalid\*filename.txt\
 Invalid Characters: ['*'] 
 
-./dummy_directory_tree/directory_4/invalid\filename.txt
+./dummy_directory_tree/directory_4/invalid\filename.txt\
 Invalid Characters: ['\\\\'] 
 
-./dummy_directory_tree/directory_1/invalid:filename.txt
+./dummy_directory_tree/directory_1/invalid:filename.txt\
 Invalid Characters: [':'] 
 
 ======== Invalid Filenames Search Complete ========
