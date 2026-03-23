@@ -1,4 +1,4 @@
-# Written in Python 3.12.3 virtual environment
+# Written in Python 3.12.3
 
 import os
 import argparse
